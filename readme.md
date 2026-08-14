@@ -4,6 +4,10 @@
 
 I personally use it to compare models on prompts that are of interest to me and to see how new models perform on tasks that I have tested in the past with other models. It's designed to give a very human-friendly view of the results, not so much to be a direct benchmark for model labs.
 
+> for example - it let's you quickly compare pelicans on a bicycle 
+<img width="1976" height="1443" alt="image" src="https://github.com/user-attachments/assets/bb514299-c751-430e-b006-5e1bc505e943" />
+
+
 It is two halves that meet at one standard format:
 
 - a **Python CLI** that sends one prompt to many models through [OpenRouter](https://openrouter.ai) and writes the results as a self-contained directory
