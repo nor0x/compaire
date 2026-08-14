@@ -1,0 +1,63 @@
+name: validate
+
+# Runs on every pull request. Deliberately has no secrets and never calls a
+# model: contributors generate results locally and commit them, so CI only has
+# to check that what they committed is well formed.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  cli:
+    name: CLI and experiments
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - run: uv sync --locked
+
+      - name: Lint
+        run: uv run ruff check .
+
+      - name: Tests
+        run: uv run pytest -q
+
+      - name: Experiments are valid and inside budget
+        run: uv run compaire validate --strict
+
+      - name: index.json is up to date
+        run: uv run compaire index --check
+
+      - name: Generated schema and types are up to date
+        run: uv run compaire schema --check
+
+  site:
+    name: Website
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - run: npm ci
+
+      - name: Typecheck
+        run: npm run check
+
+      - name: Build
+        run: npm run build

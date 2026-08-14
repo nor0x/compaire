@@ -1,0 +1,373 @@
+/* Web 1.0 design tokens: square corners, hairline rules, flat fills, no blur.
+   Light is the default; dark is applied either by the OS or by the explicit
+   toggle, which sets data-theme on <html>. */
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f2f2f2;
+  --surface-3: #e4e4e4;
+  --border: #9a9a9a;
+  --border-strong: #333333;
+  --text: #000000;
+  --text-dim: #555555;
+  --accent: #0000cc;
+  --visited: #551a8b;
+  --accent-text: #ffffff;
+  --accent-soft: #e8e8f6;
+  --ok: #006622;
+  --ok-soft: #e3f0e6;
+  --error: #b30000;
+  --error-soft: #f6e6e6;
+  --shadow: 3px 3px 0 var(--border);
+
+  /* Kept as variables so components keep compiling, but the early web had no
+     rounded corners. */
+  --radius: 0;
+  --radius-sm: 0;
+  --sans: Verdana, Geneva, Tahoma, 'DejaVu Sans', Arial, sans-serif;
+  --serif: 'Times New Roman', Times, Georgia, serif;
+  --mono: 'Courier New', Courier, 'DejaVu Sans Mono', monospace;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #0c0c0c;
+    --surface: #131313;
+    --surface-2: #1c1c1c;
+    --surface-3: #2a2a2a;
+    --border: #5e5e5e;
+    --border-strong: #c8c8c8;
+    --text: #e9e9e9;
+    --text-dim: #9b9b9b;
+    --accent: #7fb0ff;
+    --visited: #c3a0ff;
+    --accent-text: #06060a;
+    --accent-soft: #1b2233;
+    --ok: #5fce7f;
+    --ok-soft: #16241a;
+    --error: #ff7a6b;
+    --error-soft: #2a1616;
+    --shadow: 3px 3px 0 var(--border);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #0c0c0c;
+  --surface: #131313;
+  --surface-2: #1c1c1c;
+  --surface-3: #2a2a2a;
+  --border: #5e5e5e;
+  --border-strong: #c8c8c8;
+  --text: #e9e9e9;
+  --text-dim: #9b9b9b;
+  --accent: #7fb0ff;
+  --visited: #c3a0ff;
+  --accent-text: #06060a;
+  --accent-soft: #1b2233;
+  --ok: #5fce7f;
+  --ok-soft: #16241a;
+  --error: #ff7a6b;
+  --error-soft: #2a1616;
+  --shadow: 3px 3px 0 var(--border);
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text);
+  margin: 0;
+  letter-spacing: 0;
+}
+
+hr {
+  height: 0;
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--visited);
+}
+
+a:hover {
+  background: var(--accent-soft);
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+code,
+kbd {
+  font-family: var(--mono);
+  font-size: 0.9em;
+}
+
+img {
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-radius: 0;
+}
+
+/* Shared primitives used across components. A chip is a boxed label, the way a
+   bordered table cell would have carried the same job in 1998. */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.05em 0.45em;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: var(--surface-2);
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+.chip.ok {
+  color: var(--ok);
+  background: var(--ok-soft);
+  border-color: var(--ok);
+}
+
+.chip.error {
+  color: var(--error);
+  background: var(--error-soft);
+  border-color: var(--error);
+}
+
+.mono {
+  font-family: var(--mono);
+}
+
+/* Square, flat pushbutton. The whole site's controls share this look. */
+.btn {
+  padding: 0.2em 0.75em;
+  border: 1px solid var(--border-strong);
+  border-radius: 0;
+  background: var(--surface-2);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  line-height: 1.7;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--surface-3);
+  color: var(--text);
+}
+
+.btn:active {
+  background: var(--border-strong);
+  color: var(--bg);
+}
+
+.btn.selected,
+.btn[aria-pressed='true'] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+
+/* Segmented control: one bordered strip, hairline dividers between segments,
+   selected segment inverted. Shared by every view's toolbar. */
+.group {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--border-strong);
+  border-radius: 0;
+  background: var(--surface-2);
+}
+
+.group button {
+  padding: 0.2rem 0.85rem;
+  border: 0;
+  border-right: 1px solid var(--border-strong);
+  background: var(--surface-2);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  line-height: 1.7;
+}
+
+.group button:last-child {
+  border-right: 0;
+}
+
+.group button:hover {
+  background: var(--surface-3);
+}
+
+.group button.active {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+/* Square-cut slider, no rounded track or thumb. */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 6px;
+  background: var(--surface-3);
+  border: 1px solid var(--border-strong);
+}
+
+input[type='range']::-moz-range-track {
+  height: 6px;
+  background: var(--surface-3);
+  border: 1px solid var(--border-strong);
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 16px;
+  margin-top: -6px;
+  border: 1px solid var(--border-strong);
+  border-radius: 0;
+  background: var(--accent);
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 10px;
+  height: 16px;
+  border: 1px solid var(--border-strong);
+  border-radius: 0;
+  background: var(--accent);
+}
+
+.wrap {
+  width: min(1100px, 100% - 3rem);
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    width: min(1100px, 100% - 1.5rem);
+  }
+}
+
+/* Rendered markdown from model output. */
+.prose {
+  overflow-wrap: anywhere;
+}
+
+.prose > :first-child {
+  margin-top: 0;
+}
+
+.prose > :last-child {
+  margin-bottom: 0;
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  font-size: 1.1rem;
+  margin: 1.2em 0 0.5em;
+}
+
+.prose p,
+.prose ul,
+.prose ol,
+.prose blockquote {
+  margin: 0 0 0.85em;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.5em;
+}
+
+.prose ul {
+  list-style: square;
+}
+
+.prose blockquote {
+  margin-left: 0;
+  padding-left: 0.9em;
+  border-left: 4px solid var(--border);
+  color: var(--text-dim);
+}
+
+.prose pre {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: 0.75em;
+  overflow-x: auto;
+}
+
+.prose :not(pre) > code {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: 0 0.3em;
+}
+
+.prose table {
+  border-collapse: collapse;
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid var(--border);
+  padding: 0.35em 0.6em;
+  text-align: left;
+}
+
+.prose th {
+  background: var(--surface-2);
+}

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" style="background:#f0f8ff">
+
+  
+  
+  <path d="M80,200 Q120,150 160,200 L200,200 L210,140 Q250,100 260,140 L300,200" fill="none" stroke="#555" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+
+  
+  <circle cx="100" cy="230" r="30" fill="#222" />
+  <circle cx="280" cy="230" r="30" fill="#222" />
+
+  
+  <g stroke="#444" stroke-width="1">
+    <line x1="100" y1="200" x2="100" y2="230" />
+    <line x1="100" y1="200" x2="100" y2="230" />
+    <line x1="100" y1="200" x2="100" y2="230" />
+    
+    <line x1="280" y1="200" x2="280" y2="230" />
+    <line x1="280" y1="200" x2="280" y2="230" />
+    <line x1="280" y1="200" x2="280" y2="230" />
+  </g>
+
+  
+  <path d="M80,200 C70,185 70,170 80,155" fill="none" stroke="#555" stroke-width="6" stroke-linecap="round" />
+
+  
+  <ellipse cx="190" cy="185" rx="15" ry="8" fill="#777" />
+
+  
+  
+  <ellipse cx="165" cy="150" rx="30" ry="20" fill="#e0f7fa" />
+
+  
+  <circle cx="165" cy="130" r="15" fill="#e0f7fa" />
+
+  
+  <path d="M165,130 L155,140 L170,142 Z" fill="#ffcc80" />
+
+  
+  <circle cx="160" cy="125" r="2" fill="#000" />
+
+  
+  <g fill="#c0d8dc" stroke="#5fafa5" stroke-width="2">
+    
+    <path d="M135,150 C120,130 115,115 130,100" />
+    
+    <path d="M195,150 C210,130 225,115 210,100" />
+  </g>
+
+  
+  <polygon points="130,170 115,180 130,185" fill="#b2ebf2" />
+
+  
+  <g stroke="#555" stroke-width="4" fill="none">
+    
+    <line x1="150" y1="170" x2="150" y2="190" />
+    <line x1="150" y1="190" x2="135" y2="190" />
+    
+    <line x1="180" y1="170" x2="180" y2="190" />
+    <line x1="180" y1="190" x2="195" y2="190" />
+  </g>
+
+  
+  <circle cx="150" cy="190" r="5" fill="#555" />
+  <circle cx="195" cy="190" r="5" fill="#555" />
+
+</svg>

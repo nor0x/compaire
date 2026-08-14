@@ -1,0 +1,639 @@
+{
+  "schema_version": 1,
+  "id": "tell-me-a-joke",
+  "title": "tell me a joke",
+  "description": null,
+  "author": null,
+  "created_at": "2026-08-14T21:28:20.427518Z",
+  "updated_at": null,
+  "view": "table",
+  "modality": "text",
+  "tags": [],
+  "prompt": {
+    "text": "tell me a joke",
+    "system": null,
+    "file": "prompt.txt",
+    "params": {
+      "temperature": null,
+      "max_tokens": null,
+      "top_p": null,
+      "seed": null
+    }
+  },
+  "runs": [
+    {
+      "id": "cohere-north-mini-code-free__0",
+      "model": "cohere/north-mini-code:free",
+      "model_name": "Cohere: North Mini Code (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 2539,
+      "usage": {
+        "prompt_tokens": 4,
+        "completion_tokens": 44,
+        "total_tokens": 48,
+        "reasoning_tokens": 25,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 25,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "Sure! Here's a joke for you:\n\nWhy don't scientists trust atoms?\n\nBecause they make up everything!",
+          "path": null,
+          "bytes": 97,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786742771-vMaZYBFXjSiqYV8pxm9G",
+      "author": null,
+      "created_at": "2026-08-14T21:28:20.427518Z"
+    },
+    {
+      "id": "google-gemma-4-26b-a4b-it-free__0",
+      "model": "google/gemma-4-26b-a4b-it:free",
+      "model_name": "Google: Gemma 4 26B A4B  (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 14715,
+      "usage": {
+        "prompt_tokens": 17,
+        "completion_tokens": 16,
+        "total_tokens": 33,
+        "reasoning_tokens": 0,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 3.15e-06,
+          "upstream_inference_prompt_cost": 5.1e-07,
+          "upstream_inference_completions_cost": 2.64e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "Why don't scientists trust atoms?\n\nBecause they make up everything!",
+          "path": null,
+          "bytes": 67,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786742771-eOGxtgmg6BGs8692VrwE",
+      "author": null,
+      "created_at": "2026-08-14T21:28:20.427518Z"
+    },
+    {
+      "id": "google-gemma-4-31b-it-free__0",
+      "model": "google/gemma-4-31b-it:free",
+      "model_name": "Google: Gemma 4 31B (free)",
+      "sample_index": 0,
+      "status": "error",
+      "error": "HTTP 429: Provider returned error",
+      "latency_ms": 8357,
+      "usage": null,
+      "outputs": [],
+      "generation_id": null,
+      "author": null,
+      "created_at": "2026-08-14T21:28:20.427518Z"
+    },
+    {
+      "id": "liquid-lfm-2-5-2-6b-free__0",
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "model_name": "LiquidAI: LFM2.5-2.6B (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 20615,
+      "usage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 349,
+        "total_tokens": 363,
+        "reasoning_tokens": 359,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 359,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "What do you call a fake noodle?\n\nAn **impasta**!",
+          "path": null,
+          "bytes": 48,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786742771-vqEhDEZW1yQCaOHziz4R",
+      "author": null,
+      "created_at": "2026-08-14T21:28:20.427518Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-nano-30b-a3b-free__0",
+      "model": "nvidia/nemotron-3-nano-30b-a3b:free",
+      "model_name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 1157,
+      "usage": {
+        "prompt_tokens": 21,
+        "completion_tokens": 60,
+        "total_tokens": 81,
+        "reasoning_tokens": 40,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 40,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "Why don’t scientists trust atoms?\n\nBecause they **make up** everything! 😄",
+          "path": null,
+          "bytes": 78,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786742774-NbQrhp1q8Dz3XBK8q5gv",
+      "author": null,
+      "created_at": "2026-08-14T21:28:20.427518Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-free__0",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "model_name": "NVIDIA: Nemotron 3 Nano Omni (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 569,
+      "usage": {
+        "prompt_tokens": 21,
+        "completion_tokens": 32,
+        "total_tokens": 53,
+        "reasoning_tokens": 17,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 17,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "Why don’t scientists trust atoms?\n\nBecause they make up everything!",
+          "path": null,
+          "bytes": 69,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786742775-KeqyPl6QvBqTLhaemU2M",
+      "author": null,
+      "created_at": "2026-08-14T21:28:20.427518Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-super-120b-a12b-free__0",
+      "model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "model_name": "NVIDIA: Nemotron 3 Super (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 957,
+      "usage": {
+        "prompt_tokens": 21,
+        "completion_tokens": 54,
+        "total_tokens": 75,
+        "reasoning_tokens": 19,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 19,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "Sure! Here’s one for you:\n\nWhy did the scarecrow win an award?\n\nBecause he was outstanding **in his field**! 🌾😄",
+          "path": null,
+          "bytes": 119,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786742775-QpY40FIiTbCfUhOQ9F6z",
+      "author": null,
+      "created_at": "2026-08-14T21:28:20.427518Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-ultra-550b-a55b-free__0",
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "model_name": "NVIDIA: Nemotron 3 Ultra (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 923,
+      "usage": {
+        "prompt_tokens": 21,
+        "completion_tokens": 33,
+        "total_tokens": 54,
+        "reasoning_tokens": 20,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 20,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "Why don't scientists trust atoms?\n\nBecause they make up everything!",
+          "path": null,
+          "bytes": 67,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786742776-NPHQEmRKSHIgsbAg32U2",
+      "author": null,
+      "created_at": "2026-08-14T21:28:20.427518Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-5-content-safety-free__0",
+      "model": "nvidia/nemotron-3.5-content-safety:free",
+      "model_name": "NVIDIA: Nemotron 3.5 Content Safety (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 2453,
+      "usage": {
+        "prompt_tokens": 466,
+        "completion_tokens": 179,
+        "total_tokens": 645,
+        "reasoning_tokens": 197,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 197,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "User Safety: safe",
+          "path": null,
+          "bytes": 17,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786742777-5RwYJMIOfh6d9yYrGtqz",
+      "author": null,
+      "created_at": "2026-08-14T21:28:20.427518Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-5-lightning-free__0",
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "model_name": "NVIDIA: Nemotron 3.5 Lightning (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 1573,
+      "usage": {
+        "prompt_tokens": 21,
+        "completion_tokens": 343,
+        "total_tokens": 364,
+        "reasoning_tokens": 318,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 318,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "Why don't scientists trust atoms?  \nBecause they make up everything!",
+          "path": null,
+          "bytes": 68,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786742779-npkZvYZvg0Nt9rA9fW9P",
+      "author": null,
+      "created_at": "2026-08-14T21:28:20.427518Z"
+    },
+    {
+      "id": "nvidia-nemotron-nano-12b-v2-vl-free__0",
+      "model": "nvidia/nemotron-nano-12b-v2-vl:free",
+      "model_name": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
+      "sample_index": 0,
+      "status": "error",
+      "error": "nvidia/nemotron-nano-12b-v2-vl:free returned no choices",
+      "latency_ms": 120628,
+      "usage": null,
+      "outputs": [],
+      "generation_id": null,
+      "author": null,
+      "created_at": "2026-08-14T21:28:20.427518Z"
+    },
+    {
+      "id": "nvidia-nemotron-nano-9b-v2-free__0",
+      "model": "nvidia/nemotron-nano-9b-v2:free",
+      "model_name": "NVIDIA: Nemotron Nano 9B V2 (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 4885,
+      "usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 287,
+        "total_tokens": 305,
+        "reasoning_tokens": 239,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 239,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "Sure! Here's a lighthearted one for you:  \n\nWhy don’t skeletons fight each other?  \nBecause they don’t have the guts! 😄  \n\nWant another one?",
+          "path": null,
+          "bytes": 147,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786742781-VGdvq55JVdCoiHbStEB4",
+      "author": null,
+      "created_at": "2026-08-14T21:28:20.427518Z"
+    },
+    {
+      "id": "openai-gpt-oss-20b-free__0",
+      "model": "openai/gpt-oss-20b:free",
+      "model_name": "OpenAI: gpt-oss-20b (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 1802,
+      "usage": {
+        "prompt_tokens": 71,
+        "completion_tokens": 46,
+        "total_tokens": 117,
+        "reasoning_tokens": 20,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 4.2495e-06,
+          "upstream_inference_prompt_cost": 1.0295e-06,
+          "upstream_inference_completions_cost": 3.22e-06
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 20,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "Why don’t skeletons fight each other?\n\nThey don’t have the guts.",
+          "path": null,
+          "bytes": 68,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786742786-h4VonhGQwvPjqCsCwv5i",
+      "author": null,
+      "created_at": "2026-08-14T21:28:20.427518Z"
+    },
+    {
+      "id": "poolside-laguna-s-2-1-free__0",
+      "model": "poolside/laguna-s-2.1:free",
+      "model_name": "Poolside: Laguna S 2.1 (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 684,
+      "usage": {
+        "prompt_tokens": 48,
+        "completion_tokens": 15,
+        "total_tokens": 63,
+        "reasoning_tokens": 0,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "Why don't scientists trust atoms?\n\nBecause they make up everything!",
+          "path": null,
+          "bytes": 67,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786742786-a958yV0BMaOj6aKzjEPf",
+      "author": null,
+      "created_at": "2026-08-14T21:28:20.427518Z"
+    },
+    {
+      "id": "poolside-laguna-xs-2-1-free__0",
+      "model": "poolside/laguna-xs-2.1:free",
+      "model_name": "Poolside: Laguna XS 2.1 (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 1076,
+      "usage": {
+        "prompt_tokens": 48,
+        "completion_tokens": 144,
+        "total_tokens": 192,
+        "reasoning_tokens": 119,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 119,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "Why didn't the skeleton go to the party?\n\nBecause he had no *body* to go with! 😄",
+          "path": null,
+          "bytes": 83,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786742787-Z4ljfdx24Mt0tUrNjoQr",
+      "author": null,
+      "created_at": "2026-08-14T21:28:20.427518Z"
+    }
+  ],
+  "tool_version": "0.1.0"
+}

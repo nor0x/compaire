@@ -1,0 +1,642 @@
+{
+  "schema_version": 1,
+  "id": "create-an-svg-of-a-pelican-on-a-bicycle",
+  "title": "create an svg of a pelican on a bicycle",
+  "description": null,
+  "author": null,
+  "created_at": "2026-08-14T20:49:20.441462Z",
+  "updated_at": null,
+  "view": "svg",
+  "modality": "text",
+  "tags": [],
+  "prompt": {
+    "text": "create an svg of a pelican on a bicycle",
+    "system": null,
+    "file": "prompt.txt",
+    "params": {
+      "temperature": null,
+      "max_tokens": null,
+      "top_p": null,
+      "seed": null
+    }
+  },
+  "runs": [
+    {
+      "id": "cohere-north-mini-code-free__0",
+      "model": "cohere/north-mini-code:free",
+      "model_name": "Cohere: North Mini Code (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 50659,
+      "usage": {
+        "prompt_tokens": 10,
+        "completion_tokens": 1172,
+        "total_tokens": 1182,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 229,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "svg",
+          "path": "assets/a73f2ee2.svg",
+          "width": 400,
+          "height": 300,
+          "bytes": 1849,
+          "alt": "Cohere: North Mini Code (free) drawing",
+          "sanitized": false,
+          "removed": []
+        }
+      ],
+      "generation_id": "gen-1786740260-KURansdq5RDLQGtnamSY",
+      "author": null,
+      "created_at": "2026-08-14T20:49:20.441462Z"
+    },
+    {
+      "id": "google-gemma-4-26b-a4b-it-free__0",
+      "model": "google/gemma-4-26b-a4b-it:free",
+      "model_name": "Google: Gemma 4 26B A4B  (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 72905,
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 1059,
+        "total_tokens": 1082,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000175425,
+          "upstream_inference_prompt_cost": 6.9e-07,
+          "upstream_inference_completions_cost": 0.000174735
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "svg",
+          "path": "assets/c7e79d28.svg",
+          "width": 400,
+          "height": 400,
+          "bytes": 1403,
+          "alt": "Google: Gemma 4 26B A4B  (free) drawing",
+          "sanitized": false,
+          "removed": []
+        }
+      ],
+      "generation_id": "gen-1786740260-gExlnmXuSiK9xcwIoG3C",
+      "author": null,
+      "created_at": "2026-08-14T20:49:20.441462Z"
+    },
+    {
+      "id": "google-gemma-4-31b-it-free__0",
+      "model": "google/gemma-4-31b-it:free",
+      "model_name": "Google: Gemma 4 31B (free)",
+      "sample_index": 0,
+      "status": "error",
+      "error": "HTTP 429: Provider returned error",
+      "latency_ms": 9107,
+      "usage": null,
+      "outputs": [],
+      "generation_id": null,
+      "author": null,
+      "created_at": "2026-08-14T20:49:20.441462Z"
+    },
+    {
+      "id": "liquid-lfm-2-5-2-6b-free__0",
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "model_name": "LiquidAI: LFM2.5-2.6B (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 300649,
+      "usage": {
+        "prompt_tokens": 10,
+        "completion_tokens": 2464,
+        "total_tokens": 2474,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2464,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [],
+      "generation_id": "gen-1786740260-VsiAiVdQe9g7Qw9c2e7k",
+      "author": null,
+      "created_at": "2026-08-14T20:49:20.441462Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-nano-30b-a3b-free__0",
+      "model": "nvidia/nemotron-3-nano-30b-a3b:free",
+      "model_name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 15257,
+      "usage": {
+        "prompt_tokens": 26,
+        "completion_tokens": 1396,
+        "total_tokens": 1422,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 135,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "svg",
+          "path": "assets/1f73bcd3.svg",
+          "width": 400,
+          "height": 300,
+          "bytes": 1787,
+          "alt": "NVIDIA: Nemotron 3 Nano 30B A3B (free) drawing",
+          "sanitized": false,
+          "removed": []
+        }
+      ],
+      "generation_id": "gen-1786740269-pvqj96R5fPo44Zo3Cvaf",
+      "author": null,
+      "created_at": "2026-08-14T20:49:20.441462Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-free__0",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "model_name": "NVIDIA: Nemotron 3 Nano Omni (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 29169,
+      "usage": {
+        "prompt_tokens": 26,
+        "completion_tokens": 2169,
+        "total_tokens": 2195,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 382,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": null,
+          "path": "assets/5c05fd56.md",
+          "bytes": 5601,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786740284-POoa3npyEFjhrgamokYG",
+      "author": null,
+      "created_at": "2026-08-14T20:49:20.441462Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-super-120b-a12b-free__0",
+      "model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "model_name": "NVIDIA: Nemotron 3 Super (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 15630,
+      "usage": {
+        "prompt_tokens": 26,
+        "completion_tokens": 1379,
+        "total_tokens": 1405,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 331,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "Here is a simple SVG illustration of a pelican riding a bicycle. You can copy the code into an `.svg` file or embed it directly in HTML.\n\n```svg\n<svg xmlns=\"http://www.w3.org/2000/svg\"\n     width=\"400\" height=\"300\"\n     viewBox=\"0 0 400 300\"\n     aria-labelledby=\"title\"\n     role=\"img\">\n  <title id=\"title\">Pelican on a bicycle</title>\n\n  <!-- Bicycle -->\n  <!-- Wheels -->\n  <circle cx=\"100\" cy=\"250\" r=\"30\" fill=\"#dddddd\" stroke=\"#555555\" stroke-width=\"2\"/>\n  <circle cx=\"300\" cy=\"250\" r=\"30\" fill=\"#dddddd\" stroke=\"#555555\" stroke-width=\"2\"/>\n  <!-- Spokes (simple) -->\n  <line x1=\"100\" y1=\"220\" x2=\"100\" y2=\"280\" stroke=\"#555555\" stroke-width=\"1\"/>\n  <line x1=\"70\"  y1=\"250\" x2=\"130\" y2=\"250\" stroke=\"#555555\" stroke-width=\"1\"/>\n  <line x1=\"300\" y1=\"220\" x2=\"300\" y2=\"280\" stroke=\"#555555\" stroke-width=\"1\"/>\n  <line x1=\"270\" y1=\"250\" x2=\"330\" y2=\"250\" stroke=\"#555555\" stroke-width=\"1\"/>\n\n  <!-- Frame -->\n  <path d=\"M130 220   % rear axle to seat tube\n           L170 150   % seat tube up\n           L210 180   % top tube\n           L250 150   % seat tube down to rear axle (simplified)\n           L250 220   % chain stay\n           Z\"\n        fill=\"none\" stroke=\"#555555\" stroke-width=\"4\"/>\n  <!-- Seat -->\n  <ellipse cx=\"190\" cy=\"150\" rx=\"15\" ry=\"8\" fill=\"#555555\"/>\n  <!-- Handlebars -->\n  <path d=\"M210 180\n           L190 150   % stem\n           L170 130   % left bar\n           M190 150\n           L210 130\"  % right bar\n        fill=\"none\" stroke=\"#555555\" stroke-width=\"4\"/>\n\n  <!-- Pelican -->\n  <!-- Body -->\n  <ellipse cx=\"190\" cy=\"130\" rx=\"30\" ry=\"20\" fill=\"#ffffff\" stroke=\"#555555\" stroke-width=\"2\"/>\n  <!-- Wing (simple curved shape) -->\n  <path d=\"M160 115\n           q-20 -10 -30 10\n           l0 20\n           q20 10 30 -10\n           Z\"\n        fill=\"#e0e0e0\" stroke=\"#555555\" stroke-width=\"2\"/>\n  <!-- Head -->\n  <circle cx=\"220\" cy=\"115\" r=\"12\" fill=\"#ffffff\" stroke=\"#555555\" stroke-width=\"2\"/>\n  <!-- Beak -->\n  <polygon points=\"232,115 260,115 246,100\"\n           fill=\"#ff8c00\" stroke=\"#555555\" stroke-width=\"2\"/>\n  <!-- Eye -->\n  <circle cx=\"224\" cy=\"110\" r=\"2\" fill=\"#000000\"/>\n  <!-- Legs (simple) -->\n  <line x1=\"180\" y1=\"150\" x2=\"170\" y2=\"180\" stroke=\"#555555\" stroke-width=\"2\"/>\n  <line x1=\"200\" y1=\"150\" x2=\"210\" y2=\"180\" stroke=\"#555555\" stroke-width=\"2\"/>\n</svg>\n```\n\nFeel free to adjust colors, sizes, or line styles to suit your needs. Enjoy!",
+          "path": null,
+          "bytes": 2385,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786740310-8MxACArF7cNwrw9r9b1Y",
+      "author": null,
+      "created_at": "2026-08-14T20:49:20.441462Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-ultra-550b-a55b-free__0",
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "model_name": "NVIDIA: Nemotron 3 Ultra (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 220415,
+      "usage": {
+        "prompt_tokens": 10,
+        "completion_tokens": 3278,
+        "total_tokens": 3288,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 75,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": null,
+          "path": "assets/3ea28ea9.md",
+          "bytes": 12531,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786740313-uA424Wprl5sQcdxv1DYl",
+      "author": null,
+      "created_at": "2026-08-14T20:49:20.441462Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-5-content-safety-free__0",
+      "model": "nvidia/nemotron-3.5-content-safety:free",
+      "model_name": "NVIDIA: Nemotron 3.5 Content Safety (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 1377,
+      "usage": {
+        "prompt_tokens": 472,
+        "completion_tokens": 100,
+        "total_tokens": 572,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 104,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "User Safety: safe",
+          "path": null,
+          "bytes": 17,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786740326-9xBiWSdwsMGUjfWqsYGG",
+      "author": null,
+      "created_at": "2026-08-14T20:49:20.441462Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-5-lightning-free__0",
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "model_name": "NVIDIA: Nemotron 3.5 Lightning (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 16986,
+      "usage": {
+        "prompt_tokens": 26,
+        "completion_tokens": 3541,
+        "total_tokens": 3567,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1466,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "svg",
+          "path": "assets/ff57e257.svg",
+          "width": 300,
+          "height": 200,
+          "bytes": 3054,
+          "alt": "NVIDIA: Nemotron 3.5 Lightning (free) drawing",
+          "sanitized": false,
+          "removed": []
+        }
+      ],
+      "generation_id": "gen-1786740327-WBdtmzlprW0MD04FgRcb",
+      "author": null,
+      "created_at": "2026-08-14T20:49:20.441462Z"
+    },
+    {
+      "id": "nvidia-nemotron-nano-12b-v2-vl-free__0",
+      "model": "nvidia/nemotron-nano-12b-v2-vl:free",
+      "model_name": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
+      "sample_index": 0,
+      "status": "error",
+      "error": "nvidia/nemotron-nano-12b-v2-vl:free returned no choices",
+      "latency_ms": 121033,
+      "usage": null,
+      "outputs": [],
+      "generation_id": null,
+      "author": null,
+      "created_at": "2026-08-14T20:49:20.441462Z"
+    },
+    {
+      "id": "nvidia-nemotron-nano-9b-v2-free__0",
+      "model": "nvidia/nemotron-nano-9b-v2:free",
+      "model_name": "NVIDIA: Nemotron Nano 9B V2 (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 34315,
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 1635,
+        "total_tokens": 1658,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 1014,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "svg",
+          "path": "assets/254c14ac.svg",
+          "width": 400,
+          "height": 300,
+          "bytes": 894,
+          "alt": "NVIDIA: Nemotron Nano 9B V2 (free) drawing",
+          "sanitized": false,
+          "removed": []
+        }
+      ],
+      "generation_id": "gen-1786740344-oq1Owz68ysKMdfYnnRfM",
+      "author": null,
+      "created_at": "2026-08-14T20:49:20.441462Z"
+    },
+    {
+      "id": "openai-gpt-oss-20b-free__0",
+      "model": "openai/gpt-oss-20b:free",
+      "model_name": "OpenAI: gpt-oss-20b (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 85573,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 1626,
+        "total_tokens": 1703,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0001149365,
+          "upstream_inference_prompt_cost": 1.1165e-06,
+          "upstream_inference_completions_cost": 0.00011382
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 930,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "svg",
+          "path": "assets/276e5c1f.svg",
+          "width": 200,
+          "height": 200,
+          "bytes": 1307,
+          "alt": "OpenAI: gpt-oss-20b (free) drawing",
+          "sanitized": false,
+          "removed": []
+        }
+      ],
+      "generation_id": "gen-1786740409-ziz3KbvUJxUhIWeOBYad",
+      "author": null,
+      "created_at": "2026-08-14T20:49:20.441462Z"
+    },
+    {
+      "id": "poolside-laguna-s-2-1-free__0",
+      "model": "poolside/laguna-s-2.1:free",
+      "model_name": "Poolside: Laguna S 2.1 (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 62018,
+      "usage": {
+        "prompt_tokens": 54,
+        "completion_tokens": 2441,
+        "total_tokens": 2495,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 929,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "svg",
+          "path": "assets/2611fabe.svg",
+          "width": 600,
+          "height": 400,
+          "bytes": 1998,
+          "alt": "Poolside: Laguna S 2.1 (free) drawing",
+          "sanitized": false,
+          "removed": []
+        }
+      ],
+      "generation_id": "gen-1786740454-WociChhjVDNGe4gAyANN",
+      "author": null,
+      "created_at": "2026-08-14T20:49:20.441462Z"
+    },
+    {
+      "id": "poolside-laguna-xs-2-1-free__0",
+      "model": "poolside/laguna-xs-2.1:free",
+      "model_name": "Poolside: Laguna XS 2.1 (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 58004,
+      "usage": {
+        "prompt_tokens": 54,
+        "completion_tokens": 5360,
+        "total_tokens": 5414,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4716,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "svg",
+          "path": "assets/c5d68551.svg",
+          "width": 200,
+          "height": 200,
+          "bytes": 912,
+          "alt": "Poolside: Laguna XS 2.1 (free) drawing",
+          "sanitized": false,
+          "removed": []
+        }
+      ],
+      "generation_id": "gen-1786740464-Zh67jDltH0eCq7s34t8L",
+      "author": null,
+      "created_at": "2026-08-14T20:49:20.441462Z"
+    }
+  ],
+  "tool_version": "0.1.0"
+}
