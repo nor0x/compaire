@@ -1,17 +1,23 @@
 <script lang="ts">
-  import ExperimentList from './lib/ExperimentList.svelte'
-  import ExperimentPage from './lib/ExperimentPage.svelte'
-  import ThemeToggle from './lib/ThemeToggle.svelte'
-  import { listHref, router } from './lib/router.svelte'
+  import ExperimentList from "./lib/ExperimentList.svelte";
+  import ExperimentPage from "./lib/ExperimentPage.svelte";
+  import ThemeToggle from "./lib/ThemeToggle.svelte";
+  import { listHref, router } from "./lib/router.svelte";
 
-  const REPO = 'https://github.com/nor0x/compaire'
+  const REPO = "https://github.com/nor0x/compaire";
+  let isLogoHovered = false;
 </script>
 
 <header>
   <div class="wrap bar">
     <a class="brand" href={listHref()}>
-      <span class="mark">c</span>
-      <span>comp<em>AI</em>re</span>
+      <img
+        src={isLogoHovered ? "./logo_text_hover.svg" : "./logo_text.svg"}
+        alt=""
+        class="logo-text"
+        onpointerenter={() => (isLogoHovered = true)}
+        onpointerleave={() => (isLogoHovered = false)}
+      />
     </a>
     <nav>
       <a href="{REPO}#contributing">Contribute</a>
@@ -23,7 +29,7 @@
 </header>
 
 <main class="wrap">
-  {#if router.current.name === 'experiment'}
+  {#if router.current.name === "experiment"}
     <ExperimentPage id={router.current.id} repo={REPO} />
   {:else}
     <ExperimentList />
@@ -33,8 +39,15 @@
 <footer>
   <div class="wrap">
     <p>
-      Every comparison here was produced with the <code>compaire</code> CLI and contributed as a
-      pull request. <a href="{REPO}#contributing">Add your own</a>.
+      Every comparison here was produced with the <code>compaire</code> CLI and
+      contributed as a pull request.
+      <a href="{REPO}#contributing">Add your own</a>.
+    </p>
+    <p>
+      made by <a href="https://johnnys.page" target="_blank" rel="noopener"
+        >Johnny</a
+      >
+      &copy; {new Date().getFullYear()}
     </p>
   </div>
 </footer>
@@ -68,6 +81,10 @@
     font-size: 1.35rem;
     letter-spacing: 0;
     text-decoration: none;
+  }
+
+  .brand img {
+    height: 1.2rem;
   }
 
   .brand:visited {
