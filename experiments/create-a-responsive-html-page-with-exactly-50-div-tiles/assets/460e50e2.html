@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Grid Rainbow</title>
+    <style>
+        /* 
+           Requirements Analysis:
+           1. Fill viewport: body and container set to 100vh/100vw.
+           2. No gaps: CSS Grid with default spacing.
+           3. Fibonacci-Sequence size ratios: 
+              We use the first 5 numbers of the sequence (1, 1, 2, 3, 5) 
+              to define the relative width of our 5 columns. 
+              Total "fr" units = 12.
+           4. Exactly 50 tiles: JavaScript generates 50 divs.
+           5. Every tile visible: We use minmax() to ensure minimum dimensions.
+           6. Seamless rainbow gradient: Applied to body, tiles remain transparent.
+        */
+        
+        :root {
+            /* Fibonacci Ratios: 1, 1, 2, 3, 5 */
+            /* We apply these as column widths using CSS Grid fr units */
+            --fib-1: 1fr;
+            --fib-2: 1fr;
+            --fib-3: 2fr;
+            --fib-4: 3fr;
+            --fib-5: 5fr;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden; /* Prevents scrollbars */
+            
+            /* Seamless Rainbow Gradient */
+            /* Colors: Red, Orange, Yellow, Green, Cyan, Blue, Indigo, Violet */
+            background: linear-gradient(
+                135deg, 
+                #ff0000, #ffa500, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff, #ff00ff
+            );
+            background-size: 400% 400%;
+            animation: gradientMove 20s ease infinite;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .tile-container {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            
+            /* 
+               Implementing Fibonacci Size Ratios for Columns.
+               We use 5 columns. Their widths follow the sequence 1, 1, 2, 3, 5.
+               To ensure every tile remains visible on all screen sizes, 
+               we constrain the minimum width of these columns.
+            */
+            grid-template-columns: 
+                minmax(80px, var(--fib-1))  /* 1 */
+                minmax(80px, var(--fib-2))  /* 1 */
+                minmax(80px, var(--fib-3))  /* 2 */
+                minmax(80px, var(--fib-4))  /* 3 */
+                minmax(80px, var(--fib-5)); /* 5 */
+            
+            /* 
+               We need 50 tiles. 
+               With 5 columns, we need 10 rows.
+               We ensure rows are at least 80px high to remain visible.
+            */
+            grid-auto-rows: minmax(80px, 1fr);
+            
+            gap: 0; /* No gaps or overlap */
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .tile {
+            /* Tiles act as structural placeholders. 
+               We use subtle borders to visualize the grid structure 
+               without creating separate individual gradients. */
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-sizing: border-box;
+            
+            /* Transition for smoothness if resizing */
+            transition: background-color 0.3s ease;
+        }
+
+        /* Optional: Add a hover effect that slightly brightens the tile 
+           to show interaction without disrupting the gradient theme. */
+        .tile:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- The grid container will be populated by JavaScript -->
+    <div class="tile-container" id="grid"></div>
+
+    <script>
+        // Generate exactly 50 div tiles
+        const container = document.getElementById('grid');
+        
+        for (let i = 0; i < 50; i++) {
+            const tile = document.createElement('div');
+            tile.className = 'tile';
+            container.appendChild(tile);
+        }
+    </script>
+</body>
+</html>

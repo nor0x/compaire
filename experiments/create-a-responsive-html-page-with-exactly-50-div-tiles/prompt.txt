@@ -1,0 +1,1 @@
+Create a responsive HTML page with exactly 50 <div> tiles that fill the entire viewport with no gaps or overlap, using the Fibonacci-Sequence size ratios that are scaled so every tile remains visible. Make the tiles together display one seamless rainbow gradient across the whole screen, rather than giving each tile its own separate gradient.

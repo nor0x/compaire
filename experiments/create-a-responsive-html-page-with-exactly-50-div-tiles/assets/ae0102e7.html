@@ -1,0 +1,54 @@
+<!doctype html>
+<html style="height:100%">
+<head>
+    <meta charset="utf-8">
+    <title>Fibonacci Rainbow</title>
+</head>
+<body style="margin:0; padding:0; overflow:hidden;">
+    <!-- Fibonacci styled tiles -->
+    <div id="tiles" style="display:flex; flex-wrap:wrap; height:100%;
+        gap:0; margin:0; padding:0; justify-content:start;">
+        <!-- Dynamic tiles with unique sizes and gradient backgrounds -->
+    </div>
+    <script>
+        // Calculate Fibonacci sequence up to n=10 elements
+        function getFibonacci(n) {
+            const fib = [];
+            fib[0] = 0; // First element pre-defined to avoid undefined index
+            fib[1] = 1;
+            for (let i = 2; i < n; i++) {
+                fib[i] = fib[i-1] + fib[i-2];
+            }
+            return fib;
+        }
+        // Generate Fibonacci sequence for scaling
+        const fibSequence = getFibonacci(10); // Results: [0,1,1,2,3,5,8,13,21,34]
+        // Total scaling factor excluding the first undefined (position 0)
+        const totalFactor = fibSequence.slice(1).reduce((a,b) => a + b, 0);
+
+        // Last scale value from Fibonacci sequence (F(9) = 34)
+        const lastScale = fibSequence[9];
+
+        // Create and append 50 tiles
+        const container = document.getElementById('tiles');
+        const duration = 500; // Smooth transition duration
+        for (let i = 0; i < 50; i++) {
+            const percentage = fibSequence[i % fibSequence.length] / totalFactor;
+            const tile = document.createElement('div');
+            tile.style.flex = `0 0 ${percentage}%`;
+            tile.style.minHeight = idealSize + 'px'; // Edge case fix for short last tiles
+            tile.style.backgroundImage = `linear-gradient(45deg,
+                hsl(0 100% 50%) ${(1 - percentage/lastScale)*100}%,
+                hsl(360 100% 50%) ${(1 - percentage/lastScale)*100}%)`;
+            container.appendChild(tile);
+        }
+    </style>
+    <script>
+        // Dynamic context for gradient calculation
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        const idealSize = [Math.min(width, height), Math.max(width, height)];
+        document.documentElement.style.setProperty('--ideal-size', idealSize[0] + 'px');
+    </script>
+</body>
+</html>

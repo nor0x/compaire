@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fibonacci Rainbow Grid – 50 Tiles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;          /* no scrollbars */
+  }
+
+  /* The container that holds the 50 tiles */
+  #grid {
+    display: grid;
+    /* 10 columns – Fibonacci ratios 1,1,2,3,5,8,13,21,34,55 */
+    grid-template-columns: 1fr 1fr 2fr 3fr 5fr 8fr 13fr 21fr 34fr 55fr;
+    /* 5 rows – Fibonacci ratios 1,1,2,3,5 */
+    grid-template-rows: 1fr 1fr 2fr 3fr 5fr;
+    width: 100vw;
+    height: 100vh;
+    /* One seamless rainbow gradient that covers the whole viewport */
+    background: linear-gradient(to right,
+              red, orange, yellow, green, blue, indigo, violet);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  /* Tiles are transparent – the gradient shows through */
+  .tile {
+    background: transparent;
+  }
+</style>
+</head>
+<body>
+<div id="grid">
+  <!-- 50 tiles – 10 columns × 5 rows -->
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+</div>
+</body>
+</html>

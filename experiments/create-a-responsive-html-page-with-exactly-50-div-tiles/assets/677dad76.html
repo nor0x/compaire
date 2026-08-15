@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fibonacci Tiles – Seamless Rainbow Gradient</title>
+<style>
+  html,body{
+    margin:0;
+    padding:0;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;          /* just in case of rounding */
+    font-family:sans-serif;
+  }
+  .container{
+    display:flex;
+    height:100vh;
+    width:100vw;
+    /* Rainbow gradient – fixed so it doesn't move with the tiles */
+    background:linear-gradient(90deg,
+                #ff0000, #ff7f00, #ffff00,
+                #00ff00, #0000ff, #4b0082, #9400d3);
+    background-attachment:fixed;
+  }
+  .tile{
+    flex:0 0 auto;            /* no grow, no shrink */
+    height:100vh;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    /* No background – lets the container gradient show through */
+  }
+</style>
+</head>
+<body>
+<div class="container"></div>
+
+<script>
+  // ---------- Fibonacci numbers (first 50) ----------
+  const n = 50;
+  const fib = [1,1];
+  for (let i=2; i<n; i++) fib[i] = fib[i-1] + fib[i-2];
+
+  const total = fib.reduce((a,b)=>a+b,0);   // sum of the 50 numbers
+
+  // ---------- Build the tiles ----------
+  const container = document.querySelector('.container');
+  let used = 0; // to track the sum of percentages we assign
+
+  fib.forEach((value, index)=>{
+    const tile = document.createElement('div');
+    tile.className='tile';
+
+    if (index === n-1){
+      // Last tile gets the remaining space so the total is exactly 100%
+      tile.style.flexBasis = `calc(100% - ${used}%)`;
+    } else {
+      const percent = (value / total) * 100;
+      used += percent;
+      tile.style.flexBasis = `${percent}%`;
+    }
+
+    container.appendChild(tile);
+  });
+</script>
+</body>
+</html>

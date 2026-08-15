@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Rainbow Tiles</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* We use a large grid system based on Fibonacci scaling */
+        #container {
+            display: grid;
+            width: 100vw;
+            height: 100vh;
+            /* The grid tracks are sized via JS to maintain exact Fibonacci ratios */
+            gap: 0;
+        }
+
+        tile {
+            width: 100%;
+            height: 100%;
+            /* This is the trick: fixed attachment makes the gradient seamless across divs */
+            background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+            background-attachment: fixed;
+            background-size: 100vw 100vh;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script>
+    const container = document.getElementById('container');
+    const totalTiles = 50;
+
+    // 1. Generate Fibonacci Sequence
+    function generateFib(n) {
+        let seq = [1, 1];
+        for (let i = 2; i < n; i++) {
+            seq.push(seq[i - 1] + seq[i - 2]);
+        }
+        return seq;
+    }
+
+    // Since 50 tiles following strict Fibonacci growth would make the last tile 
+    // larger than the universe, we use a "scaling factor" approach where 
+    // we treat the grid as a matrix of fractional Fibonacci weights.
+    // To create a balanced "filling" layout, we distribute the 50 tiles 
+    // into a grid based on a Fibonacci-inspired distribution.
+    
+    function createLayout() {
+        const fibs = generateFib(50);
+        
+        // We will create a layout where the 50 tiles are arranged 
+        // in a grid with varying spans to mimic the sequence distribution.
+        // For a true "seamless" fill of 50 items using pure Fibonacci 
+        // sizing logic, we map them to a grid with non-uniform spans.
+        
+        let currentTile = 0;
+
+        // To ensure exactly 50 tiles fill the screen, we use a 10x5 grid 
+        // and apply Fibonacci weightings to the grid tracks.
+        const rows = 5;
+        const cols = 10;
+
+        // Assign Fibonacci weights to columns/rows to create the ratio effect
+        // We'll use a normalized version of the sequence to prevent overflow
+        const colWeights = fibs.slice(0, cols).map(v => v / fibs.slice(0, cols).reduce((a, b) => a + b));
+        const rowWeights = fibs.slice(0, rows).map(v => v / fibs.slice(0, rows).reduce((a, b) => a + b));
+
+        // Apply grid template
+        container.style.gridTemplateColumns = colWeights.map(w => `${w * 100}%`).join(' ');
+        container.style.gridTemplateRows = rowWeights.map(w => `${w * 100}%`).join(' ');
+
+        // Generate the 50 divs
+        for (let i = 0; i < totalTiles; i++) {
+            const div = document.createElement('div');
+            div.className = 'tile';
+            
+            // To make the Fibonacci logic visual, we assign each tile a random 
+            // spanning property based on the sequence, but for strict 50-count 
+            // seamless filling, we map them directly to the grid cells.
+            // Since a simple 10x5 grid uses 50 tiles, we use that for structural integrity.
+            
+            container.appendChild(div);
+        }
+
+        // Note: To truly use Fibonacci ratios for the tiles themselves 
+        // (making some tiles larger than others), we must use grid-column/row spans.
+        // However, to ensure EXACTLY 50 tiles fill the space without overlap or gaps, 
+        // the simplest mathematically perfect way is a grid-cell mapping.
+    }
+
+    createLayout();
+</script>
+</body>
+</html>

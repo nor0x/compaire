@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        }
+
+        #container {
+            position: relative;
+            width: 100%;
+        }
+
+        .tile {
+            position: absolute;
+            will-change: transform;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        // Generate Fibonacci sequence (50 terms)
+        function getFibonacci(n) {
+            let fib = [1, 1];
+            for (let i = 2; i < n; i++) {
+                fib.push(fib[i-1] + fib[i-2]);
+            }
+            return fib;
+        }
+
+        // Calculate sizes and layout
+        function arrangeTiles() {
+            const container = document.getElementById('container');
+            const tiles = getFibonacci(50);
+            const viewport = Math.min(window.innerWidth, window.innerHeight);
+            
+            // Scale factor to ensure visibility
+            const scale = viewport / (tiles.reduce((a, b) => a + b, 0) * 1.5);
+            
+            // Arrange tiles horizontally
+            let x = 0;
+            tiles.forEach((f, i) => {
+                const tile = document.createElement('div');
+                tile.className = 'tile';
+                tile.style.width = `${f * scale}px`;
+                tile.style.height = `${f * scale * 0.5}px`; // Adjust aspect ratio
+                
+                // Position tile
+                tile.style.left = `${x}px`;
+                tile.style.top = '0px';
+                
+                x += f * scale;
+                
+                container.appendChild(tile);
+            });
+            
+            container.style.width = `${x}px`;
+        }
+
+        // Initialize and handle resize
+        window.addEventListener('resize', arrangeTiles);
+        arrangeTiles();
+    </script>
+</body>
+</html>

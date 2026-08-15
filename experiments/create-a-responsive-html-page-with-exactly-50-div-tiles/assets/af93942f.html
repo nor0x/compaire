@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fibonacci Rainbow Tiles</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #111;
+    }
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      gap: 0;
+      /* Grid track sizes are set by JS using normalized Fibonacci ratios */
+    }
+    .tile {
+      /* Background color is set by JS – a continuously cycling HSL hue */
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container"></div>
+
+  <script>
+    // ---- Fibonacci size ratios ----
+    // We use the first 10 Fibonacci numbers for column widths
+    // and the first 5 for row heights. 10 × 5 = 50 tiles.
+    const fibCols = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]; // sum = 143
+    const fibRows = [1, 1, 2, 3, 5];                    // sum = 12
+
+    const container = document.querySelector('.container');
+
+    // Set grid tracks to normalized Fibonacci percentages that exactly fill the viewport
+    container.style.gridTemplateColumns = fibCols.map(f => `${f / 143 * 100}%`).join(' ');
+    container.style.gridTemplateRows  = fibRows.map(f => `${f / 12  * 100}%`).join(' ');
+
+    // ---- Create 50 tiles ----
+    for (let i = 0; i < 50; i++) {
+      const tile = document.createElement('div');
+      tile.className = 'tile';
+
+      // Position the tile in the 10‑column × 5‑row grid
+      const col  = i % 10;          // 0‑9
+      const row  = Math.floor(i / 10); // 0‑4
+      tile.style.gridColumn = `${col + 1} / ${col + 2}`;
+      tile.style.gridRow    = `${row + 1} / ${row + 2}`;
+
+      // Assign a hue that cycles 0° → 360° across the 50 tiles.
+      // This makes the collection of solid tiles read as one seamless
+      // rainbow gradient, rather than giving each tile its own separate gradient.
+      const hue = (360 * i) / 50;
+      tile.style.background = `hsl(${hue}, 80%, 50%)`;
+
+      container.appendChild(tile);
+    }
+  </script>
+</body>
+</html>

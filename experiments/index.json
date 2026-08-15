@@ -1,7 +1,39 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-14T21:28:20.453491Z",
+  "generated_at": "2026-08-15T07:21:16.842455Z",
   "experiments": [
+    {
+      "id": "create-a-responsive-html-page-with-exactly-50-div-tiles",
+      "title": "Create a responsive HTML page with exactly 50 <div> tiles…",
+      "description": null,
+      "author": null,
+      "created_at": "2026-08-15T07:21:16.775425Z",
+      "updated_at": null,
+      "view": "html",
+      "modality": "text",
+      "tags": [],
+      "models": [
+        "cohere/north-mini-code:free",
+        "google/gemma-4-26b-a4b-it:free",
+        "google/gemma-4-31b-it:free",
+        "liquid/lfm-2.5-2.6b:free",
+        "nvidia/nemotron-3-nano-30b-a3b:free",
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "nvidia/nemotron-3-super-120b-a12b:free",
+        "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "nvidia/nemotron-3.5-content-safety:free",
+        "nvidia/nemotron-3.5-lightning:free",
+        "nvidia/nemotron-nano-12b-v2-vl:free",
+        "nvidia/nemotron-nano-9b-v2:free",
+        "openai/gpt-oss-20b:free",
+        "poolside/laguna-s-2.1:free",
+        "poolside/laguna-xs-2.1:free"
+      ],
+      "run_count": 15,
+      "contributors": 1,
+      "thumb": null,
+      "total_cost": null
+    },
     {
       "id": "tell-me-a-joke",
       "title": "tell me a joke",

@@ -1,0 +1,640 @@
+{
+  "schema_version": 1,
+  "id": "create-a-responsive-html-page-with-exactly-50-div-tiles",
+  "title": "Create a responsive HTML page with exactly 50 <div> tiles…",
+  "description": null,
+  "author": null,
+  "created_at": "2026-08-15T07:21:16.775425Z",
+  "updated_at": null,
+  "view": "html",
+  "modality": "text",
+  "tags": [],
+  "prompt": {
+    "text": "Create a responsive HTML page with exactly 50 <div> tiles that fill the entire viewport with no gaps or overlap, using the Fibonacci-Sequence size ratios that are scaled so every tile remains visible. Make the tiles together display one seamless rainbow gradient across the whole screen, rather than giving each tile its own separate gradient.",
+    "system": null,
+    "file": "prompt.txt",
+    "params": {
+      "temperature": null,
+      "max_tokens": null,
+      "top_p": null,
+      "seed": null
+    }
+  },
+  "runs": [
+    {
+      "id": "cohere-north-mini-code-free__0",
+      "model": "cohere/north-mini-code:free",
+      "model_name": "Cohere: North Mini Code (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 230619,
+      "usage": {
+        "prompt_tokens": 64,
+        "completion_tokens": 6561,
+        "total_tokens": 6625,
+        "reasoning_tokens": 5827,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5827,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "html",
+          "path": "assets/460e50e2.html",
+          "bytes": 4284
+        }
+      ],
+      "generation_id": "gen-1786777942-job6PxEQ4aWQqcK0vAXM",
+      "author": null,
+      "created_at": "2026-08-15T07:21:16.775425Z"
+    },
+    {
+      "id": "google-gemma-4-26b-a4b-it-free__0",
+      "model": "google/gemma-4-26b-a4b-it:free",
+      "model_name": "Google: Gemma 4 26B A4B  (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 226486,
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 1446,
+        "total_tokens": 1524,
+        "reasoning_tokens": 0,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.00024093,
+          "upstream_inference_prompt_cost": 2.34e-06,
+          "upstream_inference_completions_cost": 0.00023859
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "html",
+          "path": "assets/3f3cb383.html",
+          "bytes": 3915
+        }
+      ],
+      "generation_id": "gen-1786777944-QvEaoAfisfGMPbfiXXL6",
+      "author": null,
+      "created_at": "2026-08-15T07:21:16.775425Z"
+    },
+    {
+      "id": "google-gemma-4-31b-it-free__0",
+      "model": "google/gemma-4-31b-it:free",
+      "model_name": "Google: Gemma 4 31B (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 40565,
+      "usage": {
+        "prompt_tokens": 65,
+        "completion_tokens": 1305,
+        "total_tokens": 1370,
+        "reasoning_tokens": 0,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "html",
+          "path": "assets/3e946374.html",
+          "bytes": 3111
+        }
+      ],
+      "generation_id": "gen-1786777947-9UDBaUxBlPc1i5qmppaR",
+      "author": null,
+      "created_at": "2026-08-15T07:21:16.775425Z"
+    },
+    {
+      "id": "liquid-lfm-2-5-2-6b-free__0",
+      "model": "liquid/lfm-2.5-2.6b:free",
+      "model_name": "LiquidAI: LFM2.5-2.6B (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 300485,
+      "usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 5649,
+        "total_tokens": 5735,
+        "reasoning_tokens": 5649,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 5649,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [],
+      "generation_id": "gen-1786777942-MFZz63KSiJtKvGkaAXam",
+      "author": null,
+      "created_at": "2026-08-15T07:21:16.775425Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-nano-30b-a3b-free__0",
+      "model": "nvidia/nemotron-3-nano-30b-a3b:free",
+      "model_name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 66983,
+      "usage": {
+        "prompt_tokens": 82,
+        "completion_tokens": 6186,
+        "total_tokens": 6268,
+        "reasoning_tokens": 4717,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4717,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "html",
+          "path": "assets/09591710.html",
+          "bytes": 2363
+        }
+      ],
+      "generation_id": "gen-1786777983-u4dwXTqydWjLFk7dX45o",
+      "author": null,
+      "created_at": "2026-08-15T07:21:16.775425Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-free__0",
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "model_name": "NVIDIA: Nemotron 3 Nano Omni (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 211523,
+      "usage": {
+        "prompt_tokens": 82,
+        "completion_tokens": 21839,
+        "total_tokens": 21921,
+        "reasoning_tokens": 20543,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 20543,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "<point>[(501, 487)]</point>",
+          "path": null,
+          "bytes": 27,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786778050-w1rN0eSF6V0cA77y5KRH",
+      "author": null,
+      "created_at": "2026-08-15T07:21:16.775425Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-super-120b-a12b-free__0",
+      "model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "model_name": "NVIDIA: Nemotron 3 Super (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 45870,
+      "usage": {
+        "prompt_tokens": 82,
+        "completion_tokens": 3699,
+        "total_tokens": 3781,
+        "reasoning_tokens": 2795,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 2795,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "html",
+          "path": "assets/677dad76.html",
+          "bytes": 1724
+        }
+      ],
+      "generation_id": "gen-1786778169-crGtDzYrAEh448xgY6gE",
+      "author": null,
+      "created_at": "2026-08-15T07:21:16.775425Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-ultra-550b-a55b-free__0",
+      "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "model_name": "NVIDIA: Nemotron 3 Ultra (free)",
+      "sample_index": 0,
+      "status": "error",
+      "error": "nvidia/nemotron-3-ultra-550b-a55b:free returned no choices",
+      "latency_ms": 356,
+      "usage": null,
+      "outputs": [],
+      "generation_id": null,
+      "author": null,
+      "created_at": "2026-08-15T07:21:16.775425Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-5-content-safety-free__0",
+      "model": "nvidia/nemotron-3.5-content-safety:free",
+      "model_name": "NVIDIA: Nemotron 3.5 Content Safety (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 1757,
+      "usage": {
+        "prompt_tokens": 526,
+        "completion_tokens": 131,
+        "total_tokens": 657,
+        "reasoning_tokens": 141,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 141,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "text",
+          "text": "User Safety: safe",
+          "path": null,
+          "bytes": 17,
+          "format": "markdown"
+        }
+      ],
+      "generation_id": "gen-1786778173-tizuWeK72V2xrvcHHJbU",
+      "author": null,
+      "created_at": "2026-08-15T07:21:16.775425Z"
+    },
+    {
+      "id": "nvidia-nemotron-3-5-lightning-free__0",
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "model_name": "NVIDIA: Nemotron 3.5 Lightning (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 258288,
+      "usage": {
+        "prompt_tokens": 82,
+        "completion_tokens": 22752,
+        "total_tokens": 22834,
+        "reasoning_tokens": 22263,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 22263,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "html",
+          "path": "assets/af93942f.html",
+          "bytes": 2099
+        }
+      ],
+      "generation_id": "gen-1786778175-3qHwc4WnncV7gHoOXRE7",
+      "author": null,
+      "created_at": "2026-08-15T07:21:16.775425Z"
+    },
+    {
+      "id": "nvidia-nemotron-nano-12b-v2-vl-free__0",
+      "model": "nvidia/nemotron-nano-12b-v2-vl:free",
+      "model_name": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 16697,
+      "usage": {
+        "prompt_tokens": 80,
+        "completion_tokens": 802,
+        "total_tokens": 882,
+        "reasoning_tokens": 0,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "html",
+          "path": "assets/ae0102e7.html",
+          "bytes": 2286
+        }
+      ],
+      "generation_id": "gen-1786778215-0vPbz1Lox9AWaWdiSSyG",
+      "author": null,
+      "created_at": "2026-08-15T07:21:16.775425Z"
+    },
+    {
+      "id": "nvidia-nemotron-nano-9b-v2-free__0",
+      "model": "nvidia/nemotron-nano-9b-v2:free",
+      "model_name": "NVIDIA: Nemotron Nano 9B V2 (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 167336,
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 7073,
+        "total_tokens": 7151,
+        "reasoning_tokens": 7489,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 7489,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "html",
+          "path": "assets/fd162f30.html",
+          "bytes": 2065
+        }
+      ],
+      "generation_id": "gen-1786778231-2EaBIRYvC4hUGdZbLy9A",
+      "author": null,
+      "created_at": "2026-08-15T07:21:16.775425Z"
+    },
+    {
+      "id": "openai-gpt-oss-20b-free__0",
+      "model": "openai/gpt-oss-20b:free",
+      "model_name": "OpenAI: gpt-oss-20b (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 233736,
+      "usage": {
+        "prompt_tokens": 131,
+        "completion_tokens": 5810,
+        "total_tokens": 5941,
+        "reasoning_tokens": 4758,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0004085995,
+          "upstream_inference_prompt_cost": 1.8995e-06,
+          "upstream_inference_completions_cost": 0.0004067
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 4758,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "html",
+          "path": "assets/6930f5d6.html",
+          "bytes": 2487
+        }
+      ],
+      "generation_id": "gen-1786778243-NMIt7v3dvXeyGq6z0lZy",
+      "author": null,
+      "created_at": "2026-08-15T07:21:16.775425Z"
+    },
+    {
+      "id": "poolside-laguna-s-2-1-free__0",
+      "model": "poolside/laguna-s-2.1:free",
+      "model_name": "Poolside: Laguna S 2.1 (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 70603,
+      "usage": {
+        "prompt_tokens": 107,
+        "completion_tokens": 3421,
+        "total_tokens": 3528,
+        "reasoning_tokens": 0,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "html",
+          "path": "assets/7ec818cc.html",
+          "bytes": 8050
+        }
+      ],
+      "generation_id": "gen-1786778261-EdScwqHPCqnWFmo91nNM",
+      "author": null,
+      "created_at": "2026-08-15T07:21:16.775425Z"
+    },
+    {
+      "id": "poolside-laguna-xs-2-1-free__0",
+      "model": "poolside/laguna-xs-2.1:free",
+      "model_name": "Poolside: Laguna XS 2.1 (free)",
+      "sample_index": 0,
+      "status": "ok",
+      "error": null,
+      "latency_ms": 60894,
+      "usage": {
+        "prompt_tokens": 107,
+        "completion_tokens": 9246,
+        "total_tokens": 9353,
+        "reasoning_tokens": 8363,
+        "cost": 0.0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 8363,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "outputs": [
+        {
+          "kind": "html",
+          "path": "assets/2dfe595a.html",
+          "bytes": 2176
+        }
+      ],
+      "generation_id": "gen-1786778332-igs1pd8mssXNW3hbgdVV",
+      "author": null,
+      "created_at": "2026-08-15T07:21:16.775425Z"
+    }
+  ],
+  "tool_version": "0.1.0"
+}

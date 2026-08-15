@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fibonacci‑Sized Rainbow Tiles</title>
+<style>
+/* ==== 1️⃣  Fibonacci ratios ==== */
+
+/* 10 Fibonacci numbers → column widths (sum = 143) */
+:root {
+  --c-1: 0.70%;   /* 1/143 */
+  --c-2: 0.70%;   /* 1/143 */
+  --c-3: 1.40%;   /* 2/143 */
+  --c-4: 2.10%;   /* 3/143 */
+  --c-5: 3.50%;   /* 5/143 */
+  --c-6: 5.60%;   /* 8/143 */
+  --c-7: 9.10%;   /* 13/143 */
+  --c-8: 14.70%;  /* 21/143 */
+  --c-9: 23.80%;  /* 34/143 */
+  --c-10: 38.50%; /* 55/143 */
+
+  /* 5 Fibonacci numbers → row heights (sum = 12) */
+  --r-1: 8.33%;   /* 1/12  */
+  --r-2: 8.33%;   /* 1/12  */
+  --r-3: 16.67%;  /* 2/12  */
+  --r-4: 25%;     /* 3/12  */
+  --r-5: 41.67%;  /* 5/12  */
+}
+
+/* ==== 2️⃣  Grid container ==== */
+.grid {
+  display: grid;
+  grid-template-columns: var(--c-1) var(--c-2) var(--c-3) var(--c-4) var(--c-5)
+                       var(--c-6) var(--c-7) var(--c-8) var(--c-9) var(--c-10);
+  grid-template-rows:    var(--r-1) var(--r-2) var(--r-3) var(--r-4) var(--r-5);
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==== 3️⃣  The tiles ==== */
+.tile {
+  /* every tile occupies exactly one cell – they are placed automatically */
+  background: hsl( calc(var(--i) * 7.2deg) , 80% , 50% ); /* rainbow hue */
+  border: 1px solid rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+/* ==== 4️⃣  Make the page look nice ==== */
+html,body{margin:0;padding:0;height:100%;overflow:hidden;}
+</style>
+</head>
+<body>
+<div class="grid">
+  <!-- 50 tiles – they are automatically placed row‑major (10 cols × 5 rows) -->
+  <!-- The `--i` custom property holds the sequential index (0‑49) -->
+  <!-- It is set by the tiny script below -->
+</div>
+
+<script>
+(function() {
+  const grid = document.querySelector('.grid');
+  const tilesCount = 50;               // we need exactly 50 tiles
+  const colCount   = 10;               // 10 columns → 10 Fibonacci widths
+  const rowCount   = 5;                // 5 rows → 5 Fibonacci heights
+
+  // Build the grid with 50 empty divs, each gets its index (0‑49) as a CSS var
+  for (let i = 0; i < tilesCount; i++) {
+    const div = document.createElement('div');
+    div.className = 'tile';
+    div.style.setProperty('--i', i);          // used for the hue calculation
+    grid.appendChild(div);
+  }
+})();
+</script>
+</body>
+</html>
